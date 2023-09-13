@@ -77,15 +77,15 @@ def WS90(data, bucket, org, location):
         data_points = [
             Point.measurement(location).tag('Measurement', 'WS90').field('Temperature(C)',          float(data['common_list'][0]['val']))                           .time(datetime.utcnow(), WritePrecision.NS),
             Point.measurement(location).tag('Measurement', 'WS90').field('Humidity(%)',             float(data['common_list'][1]['val'].replace("%", "")))          .time(datetime.utcnow(), WritePrecision.NS),
-            Point.measurement(location).tag('Measurement', 'WS90').field('FeelsLike(C)',            float(data['common_list'][2]['val']))                           .time(datetime.utcnow(), WritePrecision.NS),
-            Point.measurement(location).tag('Measurement', 'WS90').field('DewPoint(C)',             float(data['common_list'][3]['val']))                           .time(datetime.utcnow(), WritePrecision.NS),
-            Point.measurement(location).tag('Measurement', 'WS90').field('WindChill(C)',            float(data['common_list'][4]['val']))                           .time(datetime.utcnow(), WritePrecision.NS),
-            Point.measurement(location).tag('Measurement', 'WS90').field('WindSpeed(km/h)',         3.6 * float(data['common_list'][5]['val'].replace(" m/s", ""))) .time(datetime.utcnow(), WritePrecision.NS),
-            Point.measurement(location).tag('Measurement', 'WS90').field('GustSpeed(km/h)',         3.6 * float(data['common_list'][6]['val'].replace(" m/s", ""))) .time(datetime.utcnow(), WritePrecision.NS),
-            Point.measurement(location).tag('Measurement', 'WS90').field('DayWindMax(km/h)',        3.6 * float(data['common_list'][7]['val'].replace(" m/s", ""))) .time(datetime.utcnow(), WritePrecision.NS),
-            Point.measurement(location).tag('Measurement', 'WS90').field('SolarRadiation(w/m2)',    float(data['common_list'][8]['val'].replace(" W/m2", "")))      .time(datetime.utcnow(), WritePrecision.NS),
-            Point.measurement(location).tag('Measurement', 'WS90').field('UVIndex',                 float(data['common_list'][9]['val']))                           .time(datetime.utcnow(), WritePrecision.NS),
-            Point.measurement(location).tag('Measurement', 'WS90').field('WindDirection',           float(data['common_list'][10]['val']))                          .time(datetime.utcnow(), WritePrecision.NS),
+            Point.measurement(location).tag('Measurement', 'WS90').field('FeelsLike(C)',            float(data['common_list'][3]['val']))                           .time(datetime.utcnow(), WritePrecision.NS),
+            Point.measurement(location).tag('Measurement', 'WS90').field('DewPoint(C)',             float(data['common_list'][4]['val']))                           .time(datetime.utcnow(), WritePrecision.NS),
+            Point.measurement(location).tag('Measurement', 'WS90').field('WindChill(C)',            float(data['common_list'][5]['val']))                           .time(datetime.utcnow(), WritePrecision.NS),
+            Point.measurement(location).tag('Measurement', 'WS90').field('WindSpeed(km/h)',         3.6 * float(data['common_list'][6]['val'].replace(" m/s", ""))) .time(datetime.utcnow(), WritePrecision.NS),
+            Point.measurement(location).tag('Measurement', 'WS90').field('GustSpeed(km/h)',         3.6 * float(data['common_list'][7]['val'].replace(" m/s", ""))) .time(datetime.utcnow(), WritePrecision.NS),
+            Point.measurement(location).tag('Measurement', 'WS90').field('DayWindMax(km/h)',        3.6 * float(data['common_list'][8]['val'].replace(" m/s", ""))) .time(datetime.utcnow(), WritePrecision.NS),
+            Point.measurement(location).tag('Measurement', 'WS90').field('SolarRadiation(w/m2)',    float(data['common_list'][9]['val'].replace(" W/m2", "")))      .time(datetime.utcnow(), WritePrecision.NS),
+            Point.measurement(location).tag('Measurement', 'WS90').field('UVIndex',                 float(data['common_list'][10]['val']))                           .time(datetime.utcnow(), WritePrecision.NS),
+            Point.measurement(location).tag('Measurement', 'WS90').field('WindDirection',           float(data['common_list'][11]['val']))                          .time(datetime.utcnow(), WritePrecision.NS),
             Point.measurement(location).tag('Measurement', 'WS90').field('RainEvent(mm)',           float(data['piezoRain'][0]['val'].replace(" mm", "")))          .time(datetime.utcnow(), WritePrecision.NS),
             Point.measurement(location).tag('Measurement', 'WS90').field('RainRate(mm/h)',          float(data['piezoRain'][1]['val'].replace(" mm/Hr", "")))       .time(datetime.utcnow(), WritePrecision.NS),
             Point.measurement(location).tag('Measurement', 'WS90').field('RainDay(mm)',             float(data['piezoRain'][2]['val'].replace(" mm", "")))          .time(datetime.utcnow(), WritePrecision.NS),
@@ -93,7 +93,7 @@ def WS90(data, bucket, org, location):
             Point.measurement(location).tag('Measurement', 'WS90').field('RainMonth(mm)',           float(data['piezoRain'][4]['val'].replace(" mm", "")))          .time(datetime.utcnow(), WritePrecision.NS),
             Point.measurement(location).tag('Measurement', 'WS90').field('RainYear(mm)',            float(data['piezoRain'][5]['val'].replace(" mm", "")))          .time(datetime.utcnow(), WritePrecision.NS)            
         ]
-
+        
         return data_points
     
     except: #error if cannot get data for WS90
