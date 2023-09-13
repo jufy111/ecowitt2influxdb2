@@ -10,6 +10,9 @@ This repository contains a Python script for collecting weather data from variou
 - Supports the periodic collection and upload of data based on the specified time interval.
 - Handles exceptions and logs errors for better debugging.
 
+### Working for GW2000 Firmware V3.0.6
+
+
 ## Prerequisites
 
 - Python 3.x
