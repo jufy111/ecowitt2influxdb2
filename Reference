@@ -1,0 +1,54 @@
+ Ref https://www.ecowitt.com/shop/forum/forumDetails/496
+
+
+ITEM_XXXX_list :{
+
+#define ITEM_INTEMP          0x01//Indoor Temperature (℃)            2
+
+#define ITEM_OUTTEMP         0x02//Outdoor Temperature (℃)           2
+
+#define ITEM_DEWPOINT        0x03//Dew point (℃)                    2
+
+#define ITEM_WINDCHILL       0x04//Wind chill (℃)                   2
+
+#define ITEM_HEATINDEX       0x05//Heat index (℃)                   2
+
+#define ITEM_INHUMI          0x06//Indoor Humidity (%)               1
+
+#define ITEM_OUTHUMI         0x07//Outdoor Humidity (%)              1
+
+#define ITEM_ABSBARO         0x08//Absolutely Barometric (hpa)        2
+
+#define ITEM_RELBARO         0x09//Relative Barometric (hpa)          2
+
+#define ITEM_WINDDIRECTION   0x0A//Wind Direction (360°)            2
+
+#define ITEM_WINDSPEED       0x0B//Wind Speed (m/s)                  2
+
+#define ITEM_GUSTSPEED       0x0C//Gust Speed (m/s)                  2
+
+#define ITEM_RAINEVENT       0x0D//Rain Event (mm)                   2
+
+#define ITEM_RAINRATE        0x0E//Rain Rate (mm/h)                  2
+
+#define ITEM_RAIN_GAIN       0x0F//Rain gain (mm)                    2
+
+#define ITEM_RAINDAY         0x10//Rain Day (mm)                     2
+
+#define ITEM_RAINWEEK        0x11//Rain Week (mm)                    2
+
+#define ITEM_RAINMONTH       0x12//Rain Month (mm)                   4
+
+#define ITEM_RAINYEAR        0x13//Rain Year (mm)                    4
+
+#define ITEM_RAINTOTALS      0x14//Rain Totals (mm)                  4
+
+#define ITEM_LIGHT           0x15//Light (lux)                       4
+
+#define ITEM_UV              0x16//UV (uW/m2)                        2
+
+#define ITEM_UVI             0x17//UVI (0-15 index)                  1
+
+#define ITEM_TIME            0x18//Date and time                     6
+
+#define ITEM_DAYLWINDMAX     0X19//Day max wind(m/s)                 2
