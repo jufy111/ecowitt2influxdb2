@@ -101,12 +101,12 @@ def WS90(data, bucket, org, location):
         solar_radiation = extract_data_by_id(common_list_data, "0x15")
         uv_index = extract_data_by_id(common_list_data, "0x17")
         wind_direction = extract_data_by_id(common_list_data, "0x0A")
-        rain_event = extract_data_by_id(data['rain'], "0x0D") 
-        rain_rate = extract_data_by_id(data['rain'], "0x0E")
-        rain_day = extract_data_by_id(data['rain'], "0x10")
-        rain_week = extract_data_by_id(data['rain'], "0x11")
-        rain_month = extract_data_by_id(data['rain'], "0x12")
-        rain_year = extract_data_by_id(data['rain'], "0x13")
+        rain_event = extract_data_by_id(data['piezoRain'], "0x0D") 
+        rain_rate = extract_data_by_id(data['piezoRain'], "0x0E")
+        rain_day = extract_data_by_id(data['piezoRain'], "0x10")
+        rain_week = extract_data_by_id(data['piezoRain'], "0x11")
+        rain_month = extract_data_by_id(data['piezoRain'], "0x12")
+        rain_year = extract_data_by_id(data['piezoRain'], "0x13")
 
         
         data_points = [
